@@ -1,0 +1,12 @@
+name = Book categories menu
+description = Book categories menu
+core = 7.x
+package = My Features
+php = 5.2.4
+version = 7.x-1.0
+project = book_categories_taxonomy
+dependencies[] = menu
+features[features_api][] = api:1
+features[menu_custom][] = main-menu
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][taxonomy] = taxonomy

@@ -1,0 +1,7 @@
+name = Online book feature
+description = All components of the site online book
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = online_book_feature
+features[features_api][] = api:1

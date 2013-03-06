@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Online books feature feature.
+ */
+
+include_once 'online_books_feature.features.inc';

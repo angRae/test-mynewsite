@@ -1,0 +1,7 @@
+name = Isbn DB
+description = Import data from isbndb.
+core = 7.x
+package = ISBN
+files[] = isbndb_form.inc
+
+

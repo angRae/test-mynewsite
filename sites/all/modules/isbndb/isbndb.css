@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+.float-description {
+		float:left;
+  margin-right:10px;
+}
+
+.fild-description {
+  margin-bottom: 25px;
+}

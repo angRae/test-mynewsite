@@ -1,0 +1,67 @@
+<?php
+/**
+ * @file
+ * Isbn module
+ */
+
+/**
+ * Implements hook_permission().
+ */
+ function isbndb_permission() {
+  return array('access view isbndb' => array(
+    'title' => t('access view isbndb'),
+    ),
+  );
+} 
+
+/**
+ * Implements hook_menu().
+ */
+ function isbndb_menu() {
+  $items = array();
+
+  $items['isbndb'] = array(
+    'title' => 'View books from ISBNdb.com',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('isbndb_form'),
+    'description' => 'View books from ISBNdb.com',
+    'access arguments' => array('access view isbndb'),
+    'file' => 'isbndb_form.inc',
+  );
+
+  return $items;
+} 
+
+function isbndb_init() {
+	require_once drupal_get_path('module', 'isbndb') .'/isbndb_form.inc';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function isbndb_block_info() {
+  $blocks = array();
+  $blocks['isbn_block'] = array(
+      'info' => t('ISBN Block'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function isbndb_block_view($delta='') {
+	//require_once drupal_get_path('module', 'isbndb') .'/isbndb_form.inc';
+  $block = array();
+
+  switch($delta) {
+    case 'isbn_block' :
+			$block['content'] = drupal_get_form('isbndb_form');
+			break;
+	}
+
+	return $block;
+}
+
+
