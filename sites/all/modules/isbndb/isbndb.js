@@ -37,48 +37,7 @@ function newLink() {
 }
 })(jQuery);
 
-/*var $ = jQuery;
 
-$(function() {
-	$('#edit-argument').change(function() {
-		if($(this).val()!='')
-			changeLink('index1', $(this).val());
-	});
-	$('#edit-search-data').bind('keyup', function() {
-		if($(this).val()!=0) {
-			var replaceData = $(this).val().replace(/ /g, '+');
-			changeLink('value1', replaceData);
-		}
-	});
-	$('#edit-specific-result').change(function() {
-		if($(this).val()!=0)
-			changeLink('results', $(this).val());
-	});
-});
-
-function changeLink(type, value) {
-	var link = $('#edit-acces-link').val();
-	if (link) {
-		var newLink = '';
-		var lengthType = type.length;
-		var posType = link.indexOf(type);
-		if(posType!='-1') {
-			var nextAnd = link.indexOf('&', posType);
-			var oldValue = '';
-			if (nextAnd!='-1') {
-				oldValue = link.substring((posType+lengthType+1), nextAnd);
-			} else {
-				var lengthLink = link.length;
-				oldValue = link.substring((posType+lengthType+1), lengthLink);
-			}
-			newLink = link.replace(oldValue, value);
-		}
-		else {
-			newLink = link + '&' + type + '=' + value;
-		}
-		$('#edit-acces-link').empty().append(newLink);
-	}
-}*/
 
 
 
